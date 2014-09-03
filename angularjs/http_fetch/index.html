@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Fech Content</title>
+		<script src="../angular.js"></script>
+		<script src="fetcher.js"></script>
+	</head>
+
+	<body ng-app="fetchContent">
+		<div ng-controller="FetchContentController">
+			<h1>Contents</h1>
+			<h6>{{contents.length}}</h6>
+
+			<div ng-repeat="content in contents">
+				<ul>
+					<li>
+						<h3>{{content.title}}</h3>
+					</li>
+					<li>
+						{{content.content}}
+					</li>
+					<li>
+						<img ng-src="{{content.imgURL}}" />
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
